@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    /* background-color: black; */
+    color: rgb(110, 107, 107);
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns:3fr 2fr;
+    grid-auto-rows: minmax(100px,auto) ;
+    grid-gap: 5px;
+    grid-template-areas: 
+                    "header header"
+                    "main-content sidebar"
+                    "user-comments sidebar";
+    
+}
+
+.grid-item-1{
+    grid-area: header;
+    
+}
+.grid-item-1 .top-header{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+.top-menu{
+    float: left;
+    padding:5px;
+}
+
+.top-menu-right a{
+    padding-left: 20px;
+}
+.top-menu-right a img{
+    border-radius: 50%;
+}
+input[type=search]{
+     width: 100%;
+    padding: 8px 30px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(204,204,204)  
+}
+.content-components{
+    display: grid;
+    grid-template-columns: 1fr  2fr;
+    padding: 0 10px;
+}
+.component-right span{
+    float: left;
+    padding:  10px;
+}
+.component-right span:hover{
+    cursor: pointer;
+}
+.grid-item-2{
+    grid-area: main-content;
+    /* background-color: antiquewhite; */
+    margin-left: 50px;
+}
+.grid-item-3{
+    grid-area: sidebar;
+    /* background-color: aqua; */
+    margin-right: 50px;
+    padding: 20px;
+}
+.grid-item-4{
+    grid-area: user-comments;
+    /* background-color: aquamarine; */
+    margin-left: 50px;
+    padding: 5px;
+}
+.grid-item-4 .image{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: 1fr 2fr;
+}
+.grid-item-4 .image input[type=button]{
+    width: 100%;
+    background-color: red;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    font-size: large;
+
+}
+
+.right-videos{
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    grid-gap: 5px;
+    font-size: 14px;
+}
+.right-videos .descriptions:hover{
+    cursor: pointer;
+}
+.grid-item-4 img{
+    width:50px;
+    height:auto;
+    border-radius: 50%;
+    float: left;
+}
+
+
+@media (min-width:1200px)
+{
+    
+}
+
+/* desktop */
+@media (min-width:992px){
+
+}
+
+/* tablets  */
+@media (min-width:768px)
+{
+
+}
+/* extra small */
+@media (max-width:575.98px)
+{
+
+    .grid-container{
+        grid-template-columns:1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        /* grid-auto-rows: minmax(100px,auto) ; */
+        grid-gap: 2;
+        width: 100%;
+        grid-template-areas: 
+                "header"
+                "main-content"
+                "user-comments"
+                "sidebar";              
+        
+    }
+}
+
+
+
+
